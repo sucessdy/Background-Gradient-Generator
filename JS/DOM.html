@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TO-DO LIST</title>
+  </head>
+  <body>
+    <div>
+      <h1>Simple DOM Todo App</h1>
+      <input type="text" id="inputField" />
+      <button class="btn">CLick</button>
+      <div class="todoListElem"> 
+  
+      </div>
+    </div>
+
+    <script> 
+      let inputElem = document.getElementById("inputField");
+      let clickBtn = document.querySelector(".btn");
+      let todoElem = document.querySelector(".todoListElem");
+      // console.log(inputElem)
+      // console.log(click)
+      const addTodo = () => {
+        console.log(inputElem.value)
+        let pElem = document.createElement("p");
+        pElem.textContent = inputElem.value;
+        console.log(pElem);
+        todoElem.appendChild(pElem);
+
+        inputElem.value = ""
+      };
+      clickBtn.addEventListener("click", () => {
+        addTodo();
+
+      });
+
+      todoElem.addEventListener("click", (event) =>{
+console.log(event.target)
+let currentElem = event.target; 
+currentElem.remove()
+      })
+    </script>
+  </body>
+</html>
+
+<!-- CRUD opration  -->
+
+<!-- createElement (tag name)  = Create a new file / 
+ -->
+
+<!-- appendChild (node) = Append a node as a last child of the parent   -->
+<!-- removechild (node) = Remove a node from its a parent   -->
+<!-- addEventListener (event, function ) = create an event listener to handle events  -->
+<!-- setAttribute  (event , function )= set the value of a  Attribute on a element   -->

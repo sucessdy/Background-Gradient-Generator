@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="heading">This is Brower</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur dolor.
+    </p>
+    <button type="button">Click me</button>
+    <ul class="link">
+      <li>apple</li>
+      <li>banana</li>
+
+      <li>grapes</li>
+    </ul>
+
+    <script>
+      // let bodyChild = HTMLBodyElement.bodyChild
+      //     let firstChild  = HTMLBodyElement.firstChild
+      //     let nextSibling = firstChild.nextSibling;
+
+      let findElementById = document.getElementById("heading");
+      // let findElementById = document.getElementById("#heading")
+      console.log(findElementById.innerHTML);
+
+      let findElementByClass = document.getElementsByClassName("link");
+      console.log(...findElementByClass);
+
+      for (elem of findElementByClass) {
+        console.log(elem.innerHTML);
+        console.log(elem.innerText);
+        console.log(elem.textContent);
+      }
+      const findgetElementByTagName = document.getElementsByTagName("li");
+      console.log(findgetElementByTagName);
+
+      // const findElementByQuerySelector = document.querySelector(".link")
+      // console.log(findElementByQuerySelector)
+
+      const findElementByQuerySelector = document.querySelector("#heading");
+      console.log((findElementByQuerySelector.innerHTML = "mukta"));
+    </script>
+  </body>
+</html>

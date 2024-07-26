@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .rectangle {
+        width: 35rem;
+        height: 35rem;
+        background-color: aqua;
+        border-radius: 1rem;
+        margin-bottom: 3.2rem;
+        transition: all 0.6s linear;
+        box-shadow: rgba(2, 2, 34, 0.864);
+      }
+      .addTransition2 {
+        border-radius: 50%;
+        background-color: blueviolet;
+        translate: 30rem 0;
+      }
+    </style>
+  </head>
+  <body onload="console.log('Welcome to my home page!');">
+    <div class="rectangle"></div>
+    <button id="myBtn">Click me</button>
+  </body>
+  <script>
+    let myButton = document.getElementById("myBtn");
+    let Reactdiv = document.querySelector(".rectangle");
+
+    const handleMouseEvent = () => {
+      console.log("click");
+      Reactdiv.classList.add("addTransition");
+    };
+    const handleMouseEvent2 = () => {
+      console.log("click");
+      Reactdiv.classList.add("addTransition2");
+    };
+    const handleMouseEvent3 = () => {
+      console.log("click");
+      Reactdiv.classList.add("addTransition3");
+    };
+
+    myButton.addEventListener("dlclick", handleMouseEvent);
+    myButton.addEventListener("mouseover", handleMouseEvent2);
+    myButton.addEventListener("mousedown", handleMouseEvent3);
+  </script>
+</html>

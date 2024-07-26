@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <h1 id="heading"> I'm learning JS</h1> -->
+
+    <br />
+    <button onclick="alert('Welcome')">Btn 1</button>
+
+    <button onmouseover="alert('JavaScript Course')">Btn 2</button>
+    <button onmousemove="alert('JavaScript Course btn 3')">Btn 3</button>
+    <button onmouseleave="alert('JavaScript Course btn4')">Btn 4</button>
+    <section>
+      <div class="rectangle">Rectangle</div>
+      <button id="myBtn">Click</button>
+    </section>
+
+    <button onclick="myFunction('Button')">try it</button>
+    <script src="./index.js"></script>
+    <script>
+
+      let mybutton  = document.getElementById("myBtn"); 
+      let Reactdiv = document.querySelector('."rectangle')
+      // Inline event
+      function myFunction() {
+        let a = document.createElement("Button");
+        let b = document.createTextNode("Click me");
+        a.appendChild(b);
+        document.body.appendChild(a);
+      }
+
+      document.getElementById("myBtn");
+    </script>
+  </body>
+</html>
